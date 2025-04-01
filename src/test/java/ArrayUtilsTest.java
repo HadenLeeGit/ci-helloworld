@@ -32,6 +32,26 @@ public class ArrayUtilsTest {
         assertThrows(NullPointerException.class, () -> {ArrayUtils.oddOrPos(null);});
     }
 
+    @Test
+    public void testCountOfNull() {
+        assertThrows(NullPointerException.class, () -> {ArrayUtils.countOf(null, 3);});
+    }
+
+    @Test
+    public void testCountOfEmpty() {
+        assertEquals(0, ArrayUtils.countOf(new int[]{}, 3));
+    }
+
+    @Test
+    public void testCountOfNonExistent() {
+        assertEquals(0, ArrayUtils.countOf(new int[]{1, 2, 4}, 3));
+    }
+
+    @Test
+    public void testCountOfExisting() {
+        assertEquals(2, ArrayUtils.countOf(new int[]{1, 3, 4, 3}, 3));
+    }
+
 /*
     @Test
     public void testOddOrPosAllPositives() {

@@ -52,7 +52,7 @@ public class ArrayUtilsTest {
         assertEquals(2, ArrayUtils.countOf(new int[]{1, 3, 4, 3}, 3));
     }
 
-/*
+
     @Test
     public void testOddOrPosAllPositives() {
         // Any nonempty x with only non-negative elements works, because the first part of the
@@ -64,5 +64,5 @@ public class ArrayUtilsTest {
     public void testOddOrPositiveBothPositivesAndNegatives() {
         assertEquals(3, ArrayUtils.oddOrPos(new int[]{-3, -2, 0, 1, 4}));
     }
-*/
+
 }
